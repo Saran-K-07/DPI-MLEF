@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Docker",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "bash",
+            "args": [
+                "${workspaceFolder}/run.sh",
+                "${fileDirname}",
+                "${fileExtname}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
