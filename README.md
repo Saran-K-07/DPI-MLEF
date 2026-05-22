@@ -1,6 +1,6 @@
 # Internship Project at [IIITD&M Kancheepuram](https://www.iiitdm.ac.in/), Chennai
 
-| | |
+| Particulars | Details |
 | --- | --- |
 | Date | 15th May 2026 - 29th May 2026 |
 | Place | HPRCSE Laboratory, [IIITD&M Kancheepuram](https://iiitdm.ac.in/), Chennai |
@@ -31,7 +31,7 @@ Now Open this Cloned Folder either in VS Code or VS Codium
 
 ### Executing program
 If Opened in VS Code or VS Codium:
-- Open the Exploit Code file (Eg: Dynamic-Instrumentation/python/bytes/exploit.py)
+- Open the Exploit Code file (Eg: [Dynamic-Instrumentation/python/bytes/exploit.py](https://github.com/Saran-K-07/Dynamic-Instrumentation/blob/main/python/bytes/exploit.py))
 - Click `F5` to Run the Script
 
 If `F5` Doesn't work or Using Terminal:
@@ -39,14 +39,14 @@ If `F5` Doesn't work or Using Terminal:
 cd Dynamic-Instrumentation
 bash ./run.sh /path/to/exploit/folder .ext
 ```
-For Example, To run Dynamic-Instrumentation/python/bytes/exploit.py:
+For Example, To run [Dynamic-Instrumentation/python/bytes/exploit.py](https://github.com/Saran-K-07/Dynamic-Instrumentation/blob/main/python/bytes/exploit.py):
 ```bash
 cd Dynamic-Instrumentation
 bash ./run.sh ./python/bytes .py
 ```
 
 # Help
-Create an Issue, so that I can help with your doubts.
+Use [Discussion](https://github.com/Saran-K-07/Dynamic-Instrumentation/discussions), so that I can help with your doubts.
 
 # Authors
 [Saran K](https://sarankanakavel.me)
