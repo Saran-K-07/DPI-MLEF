@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+RUN apt-get update && apt-get install -y strace
+
+WORKDIR /app
+
+COPY exploit.py /app/exploit.py
+
+
+
+CMD ["sh", "-c", "target=/app/exploit.py; if [ -f /app/requirements.txt ]; then pip install -r /app/requirements.txt; fi; strace -ff -s 4096 -o /tmp/trace.log python3 $target"]

@@ -1,1 +1,3 @@
-python/
+python/*/trace/
+python/*/exploit_syscalls.log
+python/*/trace_combined.log
