@@ -1,3 +1,10 @@
 python/*/trace/
 python/*/exploit_syscalls.log
 python/*/trace_combined.log
+python/*/dockerfile
+
+java/*/trace/
+java/*/exploit_syscalls.log
+java/*/trace_combined.log
+java/*/*.class
+java/*/dockerfile

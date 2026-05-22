@@ -26,61 +26,61 @@ echo "Exploit Filename: $exploit_filename"
 case "$ext" in
   .py)
     base_image="python:3.12-slim"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace && rm -rf /var/lib/apt/lists/*"
     run_cmd='[ -f /app/requirements.txt ] && pip install -r /app/requirements.txt; python3 $target'
     ;;
 
   .js)
     base_image="node:22-bookworm-slim"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='node $target'
     ;;
 
   .sh)
     base_image="debian:bookworm-slim"
-    install_cmd="apt-get update && apt-get install -y strace bash"
+    install_cmd="apt-get update && apt-get install -y strace python3 bash && rm -rf /var/lib/apt/lists/*"
     run_cmd='bash $target'
     ;;
 
   .rb)
     base_image="ruby:3.3-slim"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='ruby $target'
     ;;
 
   .php)
     base_image="php:8.3-cli"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='php $target'
     ;;
 
   .go)
     base_image="golang:1.24-bookworm"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='go run $target'
     ;;
 
   .rs)
     base_image="rust:1-bookworm"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='rustc $target -o /tmp/a.out && /tmp/a.out'
     ;;
 
   .java)
-    base_image="eclipse-temurin:21-jdk"
-    install_cmd="apt-get update && apt-get install -y strace"
-    run_cmd='javac $target && classname=$(basename $target .java) && java -cp /app $classname'
+    base_image="eclipse-temurin:26-jdk"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
+    run_cmd='javac $target && classname=$(basename $target .java) && java -XX:UseSVE=0 -cp /app $classname'
     ;;
 
   .c)
     base_image="gcc:14"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='gcc $target -o /tmp/a.out && /tmp/a.out'
     ;;
 
   .cpp)
     base_image="gcc:14"
-    install_cmd="apt-get update && apt-get install -y strace"
+    install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='g++ $target -o /tmp/a.out && /tmp/a.out'
     ;;
 
@@ -90,12 +90,6 @@ case "$ext" in
     ;;
 esac
 
-requirements_copy=""
-
-if [ -f "$exploit_folder/requirements.txt" ]; then
-    requirements_copy='COPY requirements.txt /app/requirements.txt'
-fi
-
 dockerfile_text=$(cat <<EOF
 FROM ${base_image}
 
@@ -103,11 +97,9 @@ RUN ${install_cmd}
 
 WORKDIR /app
 
-COPY ${exploit_filename} /app/${exploit_filename}
+COPY ./* /app/
 
-${requirements_copy}
-
-CMD ["sh", "-c", "target=/app/${exploit_filename}; if [ -f /app/requirements.txt ]; then pip install -r /app/requirements.txt; fi; strace -ff -s 4096 -o /tmp/trace.log python3 \$target"]
+CMD ["sh", "-c", "export target=/app/${exploit_filename}; if [ -f /app/requirements.txt ]; then pip install -r /app/requirements.txt; fi; strace -ff -s 4096 -o /tmp/trace.log sh -c '$run_cmd'"]
 EOF
 )
 
