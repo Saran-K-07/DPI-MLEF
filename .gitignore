@@ -8,3 +8,8 @@ java/*/exploit_syscalls.log
 java/*/trace_combined.log
 java/*/*.class
 java/*/dockerfile
+
+js/*/trace/
+js/*/exploit_syscalls.log
+js/*/trace_combined.log
+js/*/dockerfile

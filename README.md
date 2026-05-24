@@ -52,4 +52,4 @@ Use [Discussion](https://github.com/Saran-K-07/Dynamic-Instrumentation/discussio
 [Saran K](https://sarankanakavel.me)
 
 # License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the [] License - see the LICENSE.md file for details.
