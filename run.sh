@@ -55,7 +55,7 @@ case "$ext" in
     ;;
 
   .go)
-    base_image="golang:1.24-bookworm"
+    base_image="golang:1.26.3-bookworm"
     install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='go run $target'
     ;;
@@ -79,7 +79,7 @@ case "$ext" in
     ;;
 
   .cpp)
-    base_image="gcc:14"
+    base_image="gcc:10.3"
     install_cmd="apt-get update && apt-get install -y strace python3 && rm -rf /var/lib/apt/lists/*"
     run_cmd='g++ $target -o /tmp/a.out && /tmp/a.out'
     ;;
@@ -131,7 +131,7 @@ echo "Docker Image: $image_tag"
 echo "--------------------------------------------"
 
 set +e
-docker run --name "$container_name" "$image_tag"
+docker run -it --name "$container_name" "$image_tag"
 run_status=$?
 set -e
 

@@ -13,3 +13,9 @@ js/*/trace/
 js/*/exploit_syscalls.log
 js/*/trace_combined.log
 js/*/dockerfile
+
+go/*/trace/
+go/*/exploit_syscalls.log
+go/*/trace_combined.log
+go/*/dockerfile
+go/*/*.so
