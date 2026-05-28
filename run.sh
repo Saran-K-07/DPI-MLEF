@@ -6,6 +6,12 @@ exploit_folder="$1"
 ext="$2"
 
 echo "--------------------------------------------"
+echo ""
+
+cat ascii.art
+
+echo ""
+echo "--------------------------------------------"
 echo "Currently working on: $exploit_folder"
 
 docker_file="$exploit_folder/dockerfile"
