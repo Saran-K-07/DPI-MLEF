@@ -1,6 +1,6 @@
 <div align="center">
 
-# Dynamic Program Instrumentation — Multi-Language Exploit Framework
+# Dynamic Payload Instrumentation and Multi-Language Exploit Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Shell Script](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
