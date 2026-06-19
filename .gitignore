@@ -19,3 +19,5 @@ go/*/exploit_syscalls.log
 go/*/trace_combined.log
 go/*/dockerfile
 go/*/*.so
+# Editor
+.vscode/
