@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata below."
+type: software
+title: "DPI-MLEF: Dynamic Program Instrumentation — Multi-Language Exploit Framework"
+version: 1.0.0
+date-released: 2026-06-19
+license: MIT
+repository-code: https://github.com/Saran-K-07/DPI-MLEF
+authors:
+  - family-names: K
+    given-names: Saran
+    alias: Saran-K-07
+    website: https://sarankanakavel.me
+abstract: >
+  An automated framework for dynamic analysis of multi-language exploit
+  techniques via Docker-sandboxed strace instrumentation. Generates labelled
+  syscall traces across Python, Java, JavaScript, and Go for downstream
+  machine learning pipelines targeting exploit classification and anomaly
+  detection.
+keywords:
+  - cybersecurity
+  - dynamic-analysis
+  - strace
+  - docker
+  - exploit
+  - machine-learning
+  - syscall
+  - intrusion-detection
