@@ -88,9 +88,9 @@ DPI-MLEF/
 
 Each exploit folder contains:
 - `exploit.<ext>` — The exploit source file
-- `dockerfile` — Auto-generated at runtime (gitignored)
-- `trace.log` — Full strace output (gitignored)
-- `exploit_syscalls.log` — Filtered suspicious syscalls (gitignored)
+- `dockerfile` — Auto-generated at runtime
+- `trace.log` — Full strace output
+- `exploit_syscalls.log` — Filtered suspicious syscalls
 
 ---
 
