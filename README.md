@@ -356,5 +356,5 @@ See [LICENSE](LICENSE) for the full text.
 ---
 
 <div align="center">
-<sub>Built for cybersecurity research at HPRCSE Lab, IIITD&M Kancheepuram</sub>
+<sub>Built for Cybersecurity Research at HPRCSE Lab, IIITD&M Kancheepuram</sub>
 </div>
