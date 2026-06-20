@@ -48,14 +48,14 @@ DPI-MLEF/
 ├── .gitignore
 │
 ├── python/                   # Python exploit techniques
-│   ├── ast bypass/
+│   ├── ast-bypass/
 │   ├── base64/
 │   ├── builtins/
 │   ├── bytes/
 │   ├── code/
 │   ├── decorators/
-│   ├── getattr restricted/
-│   ├── hex string/
+│   ├── getattr-restricted/
+│   ├── hex-string/
 │   ├── package_alteration/
 │   └── pickle/
 │
@@ -70,7 +70,7 @@ DPI-MLEF/
 │   ├── getter/
 │   ├── microtask/
 │   ├── monkey/
-│   ├── prototype pollution/
+│   ├── prototype-pollution/
 │   ├── proxy/
 │   ├── setInterval/
 │   ├── setTimeout/
