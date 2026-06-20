@@ -283,7 +283,7 @@ This framework was developed during a research internship at the **HPRCSE Labora
 | **Institution** | IIITD&M Kancheepuram, Chennai |
 | **Laboratory** | HPRCSE Laboratory |
 | **Domain** | Cybersecurity — Dynamic Analysis |
-| **Duration** | 15 May 2026 – 29 May 2026 |
+| **Duration** | 1 May 2026 – 31 May 2026 |
 | **Supervisor** | [Mr. Mohit Bhasme](https://www.linkedin.com/in/mohit-bhasme-8263891b1/) |
 | **In-Charge** | [Mr. Noor Mahammad Sk](https://www.linkedin.com/in/noor-mahammad-sk-494a9211/) |
 
